@@ -1,0 +1,15 @@
+{
+  "name": "daily-ui-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate project for practice and for Daily UI tasks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dailyui"
+  },
+  "author": "taylour",
+  "license": "ISC"
+}
