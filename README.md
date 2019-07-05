@@ -2,5 +2,6 @@
 
 ## To do:
 - get express server up and running
-- add babel, convert to es6/es7
+- begin using chokidar
+- add babel, convert to import statements & es7
 - configure webpack
