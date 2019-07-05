@@ -5,3 +5,5 @@
 - begin using chokidar
 - add babel, convert to import statements & es7
 - configure webpack
+- reverse proxy (nginx?)
+- security
