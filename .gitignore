@@ -1,0 +1,7 @@
+# glob patterns!
+
+/.*
+/*/.*
+node_modules/
+secrets/
+!.gitignore
