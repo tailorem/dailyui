@@ -17,7 +17,7 @@ const httpsServer = https.createServer(httpsOptions, app);
 app.use(express.static('./public'));
 
 // Routes
-app.get('/', (req, res) => res.status(200).sendFile('./public/index.html', { root: 'public/' }));
+app.get('/', (req, res) => res.status(200).sendFile('index.html', { root: '.' }));
 app.get('/ping', (req, res) => res.status(200).json({ says: 'pong'}));
 
 // Temporary 404 handler for non-existent routes redirects to '/'
