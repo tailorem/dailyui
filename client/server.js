@@ -14,7 +14,13 @@ const httpsPort = 443;
 const app = express();
 const httpsServer = https.createServer(httpsOptions, app);
 
-app.get('/', (req, res) => res.status(200).send('Hello world!'));
+// Routes
+app.get('/', (req, res) => res.status(200).sendFile('./index.html', { root: '.' }));
 app.get('/ping', (req, res) => res.status(200).json({ says: 'pong'}));
+
+// Temporary 404 handler for non-existent routes redirects to '/'
+app.use((req, res) => {
+  res.status(404).redirect("/");
+});
 
 httpsServer.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
