@@ -8,7 +8,7 @@ const httpsOptions = {
   key: fs.readFileSync('../secrets/ssl/taylour_dev.key')
 };
 
-const hostname = 'taylour.dev';
+const hostname = '0.0.0.0';
 const httpsPort = 443;
 
 const app = express();
