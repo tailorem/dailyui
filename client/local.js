@@ -14,8 +14,10 @@ const httpsPort = 3000;
 const app = express();
 const httpsServer = https.createServer(httpsOptions, app);
 
+app.use(express.static('./public'));
+
 // Routes
-app.get('/', (req, res) => res.status(200).sendFile('./index.html', { root: '.' }));
+app.get('/', (req, res) => res.status(200).sendFile('index.html', { root: '.' }));
 app.get('/ping', (req, res) => res.status(200).json({ says: 'pong'}));
 app.get('/dailyui/:id');
 
