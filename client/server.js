@@ -19,4 +19,4 @@ app.get('/', (req, res) => res.status(200).send('Hello world!'));
 app.get('/ping', (req, res) => res.status(200).json({ says: 'pong'}));
 
 // app.listen(httpsPort, ip, () => console.log(`Server listening on httpsPort ${httpsPort}...!`));
-httpsServer.listen(httpsPort, hostname);
+httpsServer.listen(httpsPort, hostname, () => console.log(`Server listening on httpsPort ${httpsPort}...!`));
