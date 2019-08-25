@@ -3,9 +3,9 @@ const https = require('https');
 const express = require('express');
 
 const httpsOptions = {
-  cert: fs.readFileSync('../secrets/ssl/taylour_dev.crt'),
-  ca: fs.readFileSync('../secrets/ssl/taylour_dev.ca-bundle'),
-  key: fs.readFileSync('../secrets/ssl/taylour_dev.key')
+  cert: fs.readFileSync('/home/pi/dev/dailyui/secrets/ssl/taylour_dev.crt'),
+  ca: fs.readFileSync('/home/pi/dev/dailyui/secrets/ssl/taylour_dev.ca-bundle'),
+  key: fs.readFileSync('/home/pi/dev/dailyui/secrets/ssl/taylour_dev.key')
 };
 
 const hostname = 'taylour.dev';
