@@ -8,8 +8,8 @@ const httpsOptions = {
   key: fs.readFileSync('/home/pi/dev/dailyui/secrets/ssl/taylour_dev.key')
 };
 
-const hostname = 'localhost';
-// const hostname = 'taylour.dev';
+// const hostname = 'localhost';
+const hostname = 'taylour.dev';
 const httpsPort = 443;
 
 const app = express();
@@ -26,5 +26,5 @@ app.use((req, res) => {
   res.status(404).redirect("/");
 });
 
-app.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
-// httpsServer.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
+// app.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
+httpsServer.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
