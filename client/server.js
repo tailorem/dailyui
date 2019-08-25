@@ -14,7 +14,7 @@ const httpsPort = 443;
 const app = express();
 const httpsServer = https.createServer(httpsOptions, app);
 
-app.use(express.static('./public'));
+app.use(express.static('/home/pi/dev/dailyui/client/public'));
 
 // Routes
 app.get('/', (req, res) => res.status(200).sendFile('index.html', { root: '.' }));
