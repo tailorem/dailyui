@@ -4,37 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>taylour em</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    body, div {
-      background: #cfde0d;
-      display: flex;
-      font-family: 'Courier', sans-serif;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    .main {
-      /* align-items: center; */
-      margin-top: 6rem;
-      /* height: 100vh; */
-      padding: .25rem;
-      width: 100vw;
-    }
-    .hello {
-      display: block;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </head>
 <body>
   <div class="main">
     <div class="hello">
       <h2>Hello, world</h2>
       <p>This project is under development, please check back soon!</p>
-      <p><sub>August 18, 2019</sub></p>
+      <p id="date"><sub></sub></p>
       <img src="icons8-puzzle-100.png" alt="test image puzzle piece">
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
