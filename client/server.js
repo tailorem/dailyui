@@ -8,7 +8,6 @@ const httpsOptions = {
   key: fs.readFileSync('/home/pi/dev/dailyui/secrets/ssl/taylour_dev.key')
 };
 
-// const hostname = 'localhost';
 const hostname = 'taylour.dev';
 const httpsPort = 443;
 
@@ -20,11 +19,11 @@ app.use(express.static('/home/pi/dev/dailyui/client/public'));
 // Routes
 app.get('/', (req, res) => res.status(200).sendFile('index.html', { root: '.' }));
 app.get('/ping', (req, res) => res.status(200).json({ says: 'pong'}));
+app.get('/snakes', (req, res) => res.status(200).sendFile('snake-discovery.html', { root: '.' }));
 
 // Temporary 404 handler for non-existent routes redirects to '/'
 app.use((req, res) => {
   res.status(404).redirect("/");
 });
 
-// app.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
 httpsServer.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));

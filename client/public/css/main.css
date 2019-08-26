@@ -1,0 +1,21 @@
+body {
+  background: #c7d408;
+}
+
+body, div {
+  display: flex;
+  font-family: 'Courier', sans-serif;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin-top: 6rem;
+  padding: .25rem;
+  width: 100vw;
+}
+.hello {
+  display: block;
+  text-align: center;
+}

@@ -9,17 +9,17 @@ const httpsOptions = {
 };
 
 const hostname = 'localhost';
-// const hostname = 'taylour.dev';
-const httpsPort = 443;
+const httpsPort = 3000;
 
 const app = express();
 const httpsServer = https.createServer(httpsOptions, app);
 
-app.use(express.static('./public'));
+app.use(express.static('public'));
 
 // Routes
-app.get('/', (req, res) => res.status(200).sendFile('index.html', { root: '.' }));
+app.get('/', (req, res) => res.status(200).sendFile('index.html', { root: './public' }));
 app.get('/ping', (req, res) => res.status(200).json({ says: 'pong'}));
+app.get('/snakes', (req, res) => res.status(200).sendFile('snake-discovery.html', { root: './public' }));
 
 // Temporary 404 handler for non-existent routes redirects to '/'
 app.use((req, res) => {
@@ -27,4 +27,3 @@ app.use((req, res) => {
 });
 
 app.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
-// httpsServer.listen(httpsPort, hostname, () => console.log(`Server listening on port ${httpsPort}...!`));
